@@ -236,7 +236,6 @@ body {
     flex-shrink: 0;
     width: 320px;
     height: 320px;
-    overflow: hidden;
 }
 
 .testimonial_img {
