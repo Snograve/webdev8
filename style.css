@@ -1,32 +1,21 @@
-/* =============================================
-   ЗМІННІ (CSS Custom Properties)
-   Глобальні токени кольорів та шрифтів
-   ============================================= */
+/* ЗМІННІ */
 :root {
-    --color-purple: #7B73FF;       /* Основний акцентний колір (фіолетовий) */
-    --color-dark: #0A251C;         /* Темний фон / текст */
-    --color-lime: #DFFF3B;         /* Яскравий акцент (лаймовий) */
-    --color-text-dark: #000000;    /* Основний темний текст */
-    --color-text-light: #FFFFFF;   /* Світлий текст на темному фоні */
+    --color-purple: #7B73FF;
+    --color-dark: #0A251C;
+    --color-lime: #DFFF3B;
+    --color-text-dark: #000000;
+    --color-text-light: #FFFFFF;
     --font-main: 'Inter', sans-serif;
 }
 
-
-/* =============================================
-   СКИДАННЯ СТИЛІВ (Reset)
-   Прибираємо відступи та вирівнюємо box-model
-   ============================================= */
+/* СКИДАННЯ СТИЛІВ */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-
-/* =============================================
-   BODY
-   Базові стилі сторінки
-   ============================================= */
+/* BODY */
 body {
     font-family: var(--font-main);
     background-color: #FFFFFF;
@@ -34,38 +23,27 @@ body {
     line-height: 1.5;
 }
 
-
-/* =============================================
-   КОНТЕЙНЕР
-   Обмежує ширину та центрує контент
-   ============================================= */
+/* КОНТЕЙНЕР */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-
-/* =============================================
-   HEADER — Шапка сторінки
-   ============================================= */
+/* HEADER */
 .header {
     background-color: #FFFFFF;
     padding: 20px 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-/* Флекс-рядок: лого / навігація / кнопки */
-.header__container {
+.header_container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-
-/* =============================================
-   ЛОГОТИП
-   ============================================= */
+/* ЛОГОТИП */
 .logo {
     display: flex;
     align-items: center;
@@ -75,24 +53,19 @@ body {
     color: #000;
 }
 
-/* Зображення логотипу — фіксована ширина */
-.logo__img {
+.logo_img {
     width: 24px;
     height: auto;
     display: block;
 }
 
-
-/* =============================================
-   НАВІГАЦІЯ — горизонтальне меню
-   ============================================= */
+/* НАВІГАЦІЯ */
 .nav {
     display: flex;
     gap: 32px;
 }
 
-/* Посилання в меню */
-.nav__link {
+.nav_link {
     text-decoration: none;
     color: #555555;
     font-weight: 500;
@@ -100,24 +73,17 @@ body {
     transition: color 0.2s;
 }
 
-.nav__link:hover {
+.nav_link:hover {
     color: #000;
 }
 
-
-/* =============================================
-   КНОПКИ В ШАПЦІ
-   ============================================= */
-.header__actions {
+/* КНОПКИ В ШАПЦІ */
+.header_actions {
     display: flex;
     gap: 12px;
 }
 
-
-/* =============================================
-   КНОПКИ (Button)
-   Базовий стиль + варіанти
-   ============================================= */
+/* КНОПКИ */
 .btn {
     font-family: var(--font-main);
     font-size: 14px;
@@ -128,56 +94,43 @@ body {
     cursor: pointer;
 }
 
-/* Прозора кнопка — без фону */
-.btn--transparent {
+.btn-transparent {
     background: transparent;
     color: #000;
 }
 
-/* Темна кнопка — для головних дій */
-.btn--dark {
+.btn-dark {
     background-color: #0A251C;
     color: #fff;
 }
 
-/* Анімація натискання */
 .btn:active {
     transform: scale(0.98);
 }
 
-/* Лаймова кнопка — для CTA секцій */
-.btn--lime {
+.btn-lime {
     background-color: var(--color-lime);
     color: var(--color-dark);
     font-size: 15px;
     padding: 16px 32px;
 }
 
-
-/* =============================================
-   HERO — Головний банер
-   Фіолетовий фон, центрований текст
-   ============================================= */
+/* HERO */
 .hero {
     background-color: var(--color-purple);
     color: var(--color-text-light);
     padding: 80px 0 100px 0;
     text-align: center;
-
-    /* Замість overflow: hidden використовуємо clip
-       для обрізки вмісту без впливу на скрол */
     clip-path: inset(0);
 }
 
-/* Вертикальний флекс для центрування елементів */
-.hero__container {
+.hero_container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* Головний заголовок */
-.hero__title {
+.hero_title {
     font-size: 54px;
     font-weight: 700;
     max-width: 800px;
@@ -186,8 +139,7 @@ body {
     letter-spacing: -1px;
 }
 
-/* Підзаголовок — трохи прозоріший */
-.hero__subtitle {
+.hero_subtitle {
     font-size: 18px;
     max-width: 650px;
     opacity: 0.9;
@@ -195,8 +147,7 @@ body {
     font-weight: 400;
 }
 
-/* Обгортка зображення під заголовком */
-.hero__image-wrapper {
+.hero_image-wrapper {
     margin-top: 60px;
     width: 100%;
     max-width: 1000px;
@@ -205,127 +156,100 @@ body {
     background: #fff;
 }
 
-/* Само зображення — верхні кути заокруглені */
-.hero__image {
+.hero_image {
     width: 100%;
     display: block;
     border-radius: 12px 12px 0 0;
 }
 
-
-/* =============================================
-   PARTNER — Секція партнерів / переваг
-   ============================================= */
+/* PARTNER */
 .partner {
     padding: 120px 0;
     background-color: #FFFFFF;
 }
 
-/* Загальний заголовок секцій */
 .section-title {
     font-size: 44px;
-    font-weight: 700;
+    font-weight: 550;
     text-align: center;
     margin-bottom: 60px;
     letter-spacing: -1px;
     color: var(--color-dark);
 }
 
-/* Три колонки однакової ширини */
-.partner__grid {
+.partner_grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 32px;
 }
 
-/* Картка партнера — вертикальний флекс */
 .partner-card {
     display: flex;
     flex-direction: column;
 }
 
-/* Блок із зображенням картки */
-.partner-card__image-box {
+.partner-card_image-box {
     background-color: #EFF1FF;
-    border-radius: 16px;
     padding: 30px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 24px;
     height: 260px;
-
-    /* Замість overflow: hidden — clip-path обрізає вміст */
     clip-path: inset(0 round 16px);
 }
 
-/* Зображення в картці партнера */
-.partner-card__img {
+.partner-card_img {
     max-width: 90%;
     height: auto;
     object-fit: contain;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.06);
-    border-radius: 8px;
 }
 
-/* Заголовок картки */
-.partner-card__title {
+.partner-card_title {
     font-size: 22px;
     font-weight: 600;
     margin-bottom: 12px;
     color: var(--color-dark);
 }
 
-/* Опис картки */
-.partner-card__desc {
+.partner-card_desc {
     font-size: 15px;
     color: #555555;
     line-height: 1.5;
 }
 
-
-/* =============================================
-   TESTIMONIAL — Відгук клієнта
-   Пастельний фон, горизонтальне розміщення
-   ============================================= */
+/* TESTIMONIAL */
 .testimonial {
     background-color: #FFF5ED;
     padding: 100px 0;
 }
 
-/* Флекс-рядок: фото ліворуч, текст праворуч */
-.testimonial__container {
+.testimonial_container {
     display: flex;
     align-items: center;
     gap: 80px;
     max-width: 1050px;
 }
 
-/* Фото квадратне із заокругленням */
-.testimonial__image-box {
+.testimonial_image-box {
     flex-shrink: 0;
     width: 320px;
     height: 320px;
-    border-radius: 16px;
-
-    /* Замість overflow: hidden — clip-path для обрізки фото */
-    clip-path: inset(0 round 16px);
+    overflow: hidden;
 }
 
-/* Зображення заповнює всю обгортку */
-.testimonial__img {
+.testimonial_img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-/* Текстовий блок відгуку */
-.testimonial__content {
+.testimonial_content {
     max-width: 600px;
 }
 
-/* Цитата — засічний шрифт для виразності */
-.testimonial__quote {
+.testimonial_quote {
     font-family: 'Georgia', serif;
     font-size: 32px;
     line-height: 1.3;
@@ -334,34 +258,27 @@ body {
     font-weight: 400;
 }
 
-/* Ім'я автора */
-.testimonial__author {
+.testimonial_author {
     font-style: normal;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 1;
     color: var(--color-dark);
     display: block;
 }
 
-/* Посада автора */
-.testimonial__role {
+.testimonial_role {
     font-size: 15px;
-    color: #666666;
+    color: #000000;
     margin-top: 4px;
 }
 
-
-/* =============================================
-   WHY US — Чому ми / переваги
-   Сітка 2×2 із картками
-   ============================================= */
+/* WHY US */
 .why-us {
     padding: 120px 0;
     background-color: #FFFFFF;
 }
 
-/* Дві рівні колонки, центровані */
-.why-us__grid {
+.why-us_grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
@@ -369,126 +286,111 @@ body {
     margin: 0 auto;
 }
 
-/* Картка переваги */
 .why-card {
     background-color: #F9F9F9;
     border: 1px solid #EAEAEA;
     border-radius: 12px;
-    padding: 40px;
-}
-
-/* Іконка (емодзі або SVG) */
-.why-card__icon {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-/* Заголовок картки */
-.why-card__title {
-    font-size: 22px;
-    font-weight: 600;
-    color: var(--color-dark);
-    margin-bottom: 12px;
-}
-
-/* Опис картки */
-.why-card__desc {
-    font-size: 15px;
-    color: #555555;
-    line-height: 1.6;
-}
-
-
-/* =============================================
-   SECURITY — Секція безпеки
-   Три картки на блідому фоні
-   ============================================= */
-.security {
-    background-color: #F4F5FF;
-    padding: 120px 0;
-}
-
-/* Три рівні колонки */
-.security__grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-}
-
-/* Картка безпеки — флекс-колонка */
-.security-card {
-    background-color: #FFFFFF;
-    border-radius: 16px;
-
-    /* Замість overflow: hidden — clip-path для заокруглень */
-    clip-path: inset(0 round 16px);
-
+    padding: 24px;
     display: flex;
     flex-direction: column;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.02);
 }
 
-/* Верхня частина картки з ілюстрацією */
-.security-card__top {
-    background-color: #EFF1F4;
-    height: 220px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+.why-card_icon {
+    width: 32px; 
+    margin-bottom: 16px; 
 }
 
-/* Ілюстрація в картці */
-.security-card__img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
+.why-card_icon img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
-/* Нижня текстова частина картки */
-.security-card__bottom {
-    padding: 30px;
-    flex-grow: 1;
-}
-
-/* Заголовок картки безпеки */
-.security-card__title {
-    font-size: 20px;
+.why-card_title {
+    font-size: 18px;
     font-weight: 600;
     color: var(--color-dark);
-    margin-bottom: 12px;
+    margin-bottom: 8px;
 }
 
-/* Опис картки безпеки */
-.security-card__desc {
+.why-card_desc {
     font-size: 14px;
     color: #555555;
     line-height: 1.5;
 }
 
+/* SECURITY */
+.security {
+    background-color: #F4F5FF;
+    padding: 120px 0;
+}
 
-/* =============================================
-   CTA — Заклик до дії
-   Фіолетовий фон, центрований текст
-   ============================================= */
+.security_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.security-card {
+   background-color: #FFFFFF;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.security-card_top {
+    width: 100%;
+    height: 220px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+.security-card_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    display: block;
+}
+
+.security-card_bottom {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.security-card_title {
+    font-size: 20px;
+    font-weight: 100;
+    color: var(--color-dark);
+    margin-bottom: 12px;
+}
+
+.security-card_desc {
+    font-size: 14px;
+    color: #555555;
+    line-height: 1.5;
+}
+
+/* CTA */
 .cta {
-    background-color: var(--color-purple);
+    background-color:#8885ff;
     padding: 100px 0;
     text-align: center;
-
-    /* clip замість overflow: hidden — не впливає на скрол */
     clip-path: inset(0);
 }
 
-/* Флекс-колонка для вертикального центрування */
-.cta__container {
+ .cta_container {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+    position: relative;
+} 
 
-/* Великий заголовок на фіолетовому фоні */
-.cta__title {
+.cta_title {
     font-size: 48px;
     font-weight: 700;
     color: var(--color-text-light);
@@ -497,46 +399,40 @@ body {
     letter-spacing: -1px;
 }
 
-/* Декоративна стрілка — позиціонується через margin замість absolute */
-.cta__arrow {
-    width: 80px;
-    margin-top: 20px;
-    margin-left: auto;       /* Штовхаємо вправо через авто-відступ */
-    margin-right: 15%;       /* Відступ від правого краю */
-    align-self: flex-end;    /* Вирівнюємо по правому краю флекс-контейнера */
-}
+ .cta_arrow {
+    width: 240px;
+    position: absolute;
+    top: 100%;          
+    right: 10%;
+    transform: translateX(-160px) rotate(15deg);
+    pointer-events: none;
+} 
 
-
-/* =============================================
-   FOOTER — Підвал сторінки
-   ============================================= */
+/* FOOTER */
 .footer {
     background-color: #FAFAFA;
     padding: 40px 0;
     border-top: 1px solid #EEEEEE;
 }
 
-/* Флекс-рядок: копірайт ліворуч, посилання праворуч */
-.footer__container {
+.footer_container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-/* Горизонтальний список посилань */
-.footer__links {
+.footer_links {
     display: flex;
-    gap: 24px;
+    gap: 50px;
 }
 
-/* Посилання у футері */
-.footer__link {
+.footer_link {
     text-decoration: none;
     font-size: 14px;
     color: #666666;
     transition: color 0.2s;
 }
 
-.footer__link:hover {
+.footer_link:hover {
     color: var(--color-dark);
 }
