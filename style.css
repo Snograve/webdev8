@@ -514,3 +514,23 @@ body {
     } 
 
 }
+
+/* --- АДАПТАЦІЯ ДЛЯ ВЕЛИКИХ ЕКРАНІВ --- */
+
+/* 2K Екрани */
+@media (min-width: 1440px) {
+    .container { max-width: 1300px; }
+        .cta_arrow { 
+            top: 80%;
+            width: 350px;
+            transform: rotate(-1deg);
+        }
+}
+
+/* 4K Екрани */
+@media (min-width: 2560px) {
+    .container { max-width: 2000px; }
+    .hero_title { font-size: 72px; }
+    .section-title { font-size: 56px; }
+    .cta_arrow { width: 350px; }
+}
