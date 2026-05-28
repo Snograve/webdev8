@@ -401,10 +401,11 @@ body {
  .cta_arrow {
     width: 240px;
     position: absolute;
-    top: 100%;          
-    right: 10%;
+    top:100%;          
+    left: 80%;
     transform: translateX(-160px) rotate(15deg);
     pointer-events: none;
+    z-index: -1;
 } 
 
 /* FOOTER */
@@ -434,4 +435,82 @@ body {
 
 .footer_link:hover {
     color: var(--color-dark);
+}
+
+/*Адаптація для планшетів*/
+@media (max-width: 768px) {
+
+    /* Зменшуємо шрифти для кращої читабельності */
+    .hero_title { font-size: 36px; }
+    .section-title { font-size: 32px; }
+
+    /* Перемикаємо сітки на одну колонку */
+    .partner_grid,.security_grid {
+        grid-template-columns: 1fr;
+    }
+
+    .why-us_grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Адаптація відгуків */
+    .testimonial_container {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+    .testimonial_image-box {
+        width: 200px;
+        height: 200px;
+    }
+
+    .logo{ font-size: 15px;}
+
+    .header_container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .header_actions {
+        width: 100%;            
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .nav { 
+        gap: 15px; 
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav_link{font-size: 15px;}
+
+    .btn{
+        padding: 8px 16px;
+        font-size: 12px
+    }
+
+    .footer_container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .cta_arrow {
+        width: 120px;
+        transform: translateX(-50%) rotate(10deg);
+        right: 15%;
+        top: 100%;
+    }
+}
+
+
+/*Адаптація для телефонів*/
+@media (max-width: 480px) {
+    .hero_title { font-size: 28px; }
+    .cta_arrow { width: 80px; }
+    .btn { 
+        padding: 6px 12px; 
+        font-size: 11px; 
+    } 
+
 }
